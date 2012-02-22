@@ -10,7 +10,7 @@ Installation
 ------------
 
 ```ruby
-# In your Gemfile...
+# Include zazz in your gemfile, and remove sass and compass
 gem 'zazz'
 ```
 
@@ -22,13 +22,16 @@ gem 'zazz'
 The Mixins
 ----------
 
-- no_float
 - float_left
 - float_right
+- no_float
 - centered_container($width)
 - underline_on_hover_only
 - horizontal_list
 - device($device)
+
+See [stylesheets/_zazz.sass](https://github.com/zeke/zazz/blob/master/stylesheets/_zazz.sass)
+for reference.
     
 License
 -------
