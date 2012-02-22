@@ -1,4 +1,6 @@
+require "compass"
 require "zazz/version"
+
 module Compass
   module Zazz
     base_directory  = File.join(File.dirname(__FILE__), '..')

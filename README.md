@@ -15,7 +15,7 @@ gem 'zazz'
 ```
 
 ```sass
-// In your sass/scss file...
+// In your main sass/scss file...
 @import 'zazz'
 ```
 
@@ -35,4 +35,4 @@ License
 Copyright (c) 2012 Zeke Sikelianos
 All Rights Reserved.
 
-Licensed under the [MIT license](http://www.opensource.org/licenses/mit-license.php)
+Licensed under the [MIT license](http://www.opensource.org/licenses/mit-license.php).

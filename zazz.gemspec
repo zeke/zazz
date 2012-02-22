@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency("rake")
   
   s.add_dependency("compass", [">= 0.11"])  
-  # gotta use this funky version to get the new content 'blocks'
+  # gotta use this funky version to get the new content blocks
+  # http://thesassway.com/intermediate/responsive-web-design-part-2
   s.add_dependency("sass", ["~> 3.2.0.alpha.76"])
 end
