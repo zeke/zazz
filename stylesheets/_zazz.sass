@@ -1,0 +1,59 @@
+=no_float
+  display: block
+  float: none
+  clear: both
+  overflow: hidden
+  
+=float_left
+  display: block
+  clear: none
+  float: left
+
+=float_right
+  display: block
+  clear: none
+  float: right
+
+=centered_container($width)
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  width: $width
+  
+=underline_on_hover_only
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+=horizontal_list
+  float: none
+  clear: both
+  overflow: hidden
+  margin: 0
+  padding: 0
+  li
+    float: left
+    clear: none
+    margin: 0
+    padding: 2px 10px
+    border-right: 1px solid #DDD
+    &:first-child, &.first
+      padding-left: 0
+    &:last-child, &.last
+      padding-right: 0
+      border-right: none
+
+=device($device)
+  @if $device == phone
+    @media only screen and (max-width: 767px)
+      @content
+  @else if $device == desktop
+    @media only screen and (min-width: 768px)
+      @content
+
+//  @else if $device == coolphone
+//    @media only screen and (min-width: 480px) and (max-width: 767px)
+//      @content
+//  @else if $device == tablet
+//    @media only screen and (min-width: 768px) and (max-width: 959px)
+//      @content
