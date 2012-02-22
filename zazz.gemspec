@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.8.10}
   s.add_development_dependency("rake")
   
-  s.add_dependency("compass", [">= 0.11"])  
+  s.add_dependency("compass", ["~> 0.12.rc.1"])
   # gotta use this funky version to get the new content blocks
   # http://thesassway.com/intermediate/responsive-web-design-part-2
   s.add_dependency("sass", ["~> 3.2.0.alpha.76"])
