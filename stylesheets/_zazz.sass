@@ -19,11 +19,6 @@
   margin-right: auto
   position: relative
   width: $width
-  
-=underline_on_hover_only
-  text-decoration: none
-  &:hover
-    text-decoration: underline
 
 =horizontal_list
   float: none
@@ -42,18 +37,3 @@
     &:last-child, &.last
       padding-right: 0
       border-right: none
-
-=device($device)
-  @if $device == phone
-    @media only screen and (max-width: 767px)
-      @content
-  @else if $device == desktop
-    @media only screen and (min-width: 768px)
-      @content
-
-//  @else if $device == coolphone
-//    @media only screen and (min-width: 480px) and (max-width: 767px)
-//      @content
-//  @else if $device == tablet
-//    @media only screen and (min-width: 768px) and (max-width: 959px)
-//      @content
