@@ -20,6 +20,14 @@
   position: relative
   width: $width
 
+=reset_list
+  margin: 0
+  padding: 0
+  list-style: none
+  > li
+    margin: 0
+    padding: 0
+
 =horizontal_list
   float: none
   clear: both
@@ -37,3 +45,12 @@
     &:last-child, &.last
       padding-right: 0
       border-right: none
+
+=enable_ligatures
+  -webkit-font-feature-settings: "liga","dlig"
+  -moz-font-feature-settings: "liga=1, dlig=1"
+  -moz-font-feature-settings: "liga","dlig"
+  -ms-font-feature-settings: "liga","dlig"
+  -o-font-feature-settings: "liga","dlig"
+  font-feature-settings: "liga","dlig"
+  text-rendering: optimizeLegibility
