@@ -3,6 +3,7 @@
   float: none
   clear: both
   overflow: hidden
+  // +pie-clearfix may be equivalent in compass
   
 =float_left
   display: block
@@ -61,3 +62,32 @@
   -o-font-feature-settings: "liga","dlig"
   font-feature-settings: "liga","dlig"
   text-rendering: optimizeLegibility
+
+
+// def rounded_avatar(image_path)
+//   content_tag(:div, class: "avatar") do
+//     content_tag(:div, class: "wrapper") do
+//       image_tag(image_path)
+//     end
+//   end
+// end
+
+=rounded_avatar($size:200px, $border_thickness:10px, $border_color: rgba(white, 1))
+  display: inline-block
+  +box-sizing(border-box)
+  margin: 10px
+  padding: $border_thickness
+  background-color: $border_color
+  +border-radius($size/2 + $border_thickness*2)
+  +box-shadow(rgba(#000, 0.3) 3px 3px 10px)
+  img, .wrapper
+    display: block
+    margin: 0
+    padding: 0
+    +border-radius($size/2)
+    max-width: $size
+    min-width: $size
+    min-height: $size
+  .wrapper
+    height: $size
+    overflow: hidden
