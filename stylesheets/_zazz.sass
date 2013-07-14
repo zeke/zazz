@@ -1,34 +1,33 @@
-=no_float
+@mixin no-float
   display: block
   float: none
   clear: both
   overflow: hidden
-  // +pie-clearfix may be equivalent in compass
-  
-=float_left
+
+@mixin float-left
   display: block
   clear: none
   float: left
 
-=float_right
+@mixin float-right
   display: block
   clear: none
   float: right
 
-=centered_container($width)
+@mixin centered-container($width)
   margin-left: auto
   margin-right: auto
   position: relative
   width: $width
 
-=flexible_centered_container($width)
+@mixin flexible-centered-container($width)
   margin-left: auto
   margin-right: auto
   position: relative
   min-width: 320px
   max-width: $width
 
-=reset_list
+@mixin reset-list
   margin: 0
   padding: 0
   list-style: none
@@ -36,7 +35,7 @@
     margin: 0
     padding: 0
 
-=horizontal_list
+@mixin horizontal-list
   float: none
   clear: both
   overflow: hidden
@@ -54,40 +53,11 @@
       padding-right: 0
       border-right: none
 
-=enable_ligatures
+@mixin enable-ligatures
   -webkit-font-feature-settings: "liga","dlig"
-  -moz-font-feature-settings: "liga=1, dlig=1"
+  -moz-font-feature-settings: "liga@mixin 1, dlig@mixin 1"
   -moz-font-feature-settings: "liga","dlig"
   -ms-font-feature-settings: "liga","dlig"
   -o-font-feature-settings: "liga","dlig"
   font-feature-settings: "liga","dlig"
   text-rendering: optimizeLegibility
-
-
-// def rounded_avatar(image_path)
-//   content_tag(:div, class: "avatar") do
-//     content_tag(:div, class: "wrapper") do
-//       image_tag(image_path)
-//     end
-//   end
-// end
-
-=rounded_avatar($size:200px, $border_thickness:10px, $border_color: rgba(white, 1))
-  display: inline-block
-  +box-sizing(border-box)
-  margin: 10px
-  padding: $border_thickness
-  background-color: $border_color
-  +border-radius($size/2 + $border_thickness*2)
-  +box-shadow(rgba(#000, 0.3) 3px 3px 10px)
-  img, .wrapper
-    display: block
-    margin: 0
-    padding: 0
-    +border-radius($size/2)
-    max-width: $size
-    min-width: $size
-    min-height: $size
-  .wrapper
-    height: $size
-    overflow: hidden
